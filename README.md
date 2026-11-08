@@ -30,6 +30,14 @@ PDF'i yeniden üretmek için `bakara-serisi` klasöründe:
 python3 build.py && node pdf.js
 ```
 
+### `gelenek-ve-din/`
+"Gelenek böyle diyor, din böyle diyor" serisi.
+
+- `01_16_ornek.md`: Dinden sanılan 16 gelenek ve Kur'an ile sünnetteki karşılıkları.
+- `02_toplu_konusma_gelenek_din.md`: Bu 16 örneği tek videoda anlatan konuşma metni (2,5–3 dk).
+- `03_hayatin_dongusu.md`: Doğumdan ölüme geleneklerin tablosu (dinde var, gelenek, dinle çatışıyor).
+- `04_dogumdan_olume_konusma.md`: "Doğumdan ölüme" konuşma metni, kısa ve uzun versiyon.
+
 ### `video-sablonlari/`
 Videoların üstüne gelen çizimler ve animasyonlar.
 
