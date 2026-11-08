@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+video-sablonlari/*.html
+video-sablonlari/*_o?.png
+video-sablonlari/o?.png
+video-sablonlari/snap_*.jpg
+bakara-serisi/*.html
+carousel-hz-musa/slide*.html
