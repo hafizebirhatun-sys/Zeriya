@@ -127,7 +127,7 @@ K: Bakara 57, 61
 N: Ayetteki "fûm" kelimesi hem sarımsak hem de buğday olarak yorumlanır.
 
 ## Bir bahane hikâyesi (İnek)
-@ Bakara 67–71
+@ Bakara 67–74
 H: Kur'an'ın en uzun suresinin adı neden "İnek"? Cevap senin bahanelerinde.
 > Hz. Musa kavmine diyor ki: "Allah size bir inek kesmenizi emrediyor."
 > Basit bir emir. Herhangi bir inek.
@@ -135,14 +135,23 @@ H: Kur'an'ın en uzun suresinin adı neden "İnek"? Cevap senin bahanelerinde.
 > Yine soruyorlar: "Rengi ne?" Cevap geliyor: Sapsarı, bakanların içini açan bir renk.
 > Yine soruyorlar: "Nasıl bir şey olduğunu açıkla. İnekler bize birbirine benzer göründü."
 > Her soru, emri biraz daha zorlaştırıyor. Sonunda o tarife uyan tek bir inek kalıyor.
-> Ve ayet bitirirken şunu söylüyor: **"Fe zebahûhâ ve mâ kâdû yef'alûn."** "Sonunda onu kestiler. Ama neredeyse yapmayacaklardı."
-> Neredeyse.
-> Ben bunu okuyunca kendimi gördüm. "Önce biraz daha araştırayım." "Hangi kitaptan başlasam?" "Pazartesi başlarım."
-> Soru sormak güzel. Ama bazen sorular, yapmamak için bulduğumuz en kibar bahane oluyor.
-> Kur'an'ın en uzun suresi, sorularla geciktirilen bir emrin adını taşıyor.
-> **Senin "inek"in ne? Hangi işi sorularla erteliyorsun?**
+> Ve ayet şöyle bitiyor: **"Fe zebahûhâ ve mâ kâdû yef'alûn."** "Sonunda onu kestiler. Ama neredeyse yapmayacaklardı."
+> Peki bu inek neden kesilecekti? Çoğumuz bunu hiç sormayız.
+> Kur'an bir sonraki ayette açıklıyor: **"Hani bir adam öldürmüştünüz de suçu birbirinizin üzerine atıyordunuz."**
+> Bir cinayet işlenmişti. Ve katil saklanıyordu.
+> İnek, o katilin ortaya çıkması için kesilecekti. Allah, kesilen ineğin bir parçasıyla ölüye vurulmasını emretti. Ölü dirildi ve katilini söyledi.
+> Yani o inek, adaletin ortaya çıkması içindi.
+> Şimdi o sorulara bir daha bak. "Nasıl bir inek? Rengi ne? Nasıl bir şey?" Her soru, bir katilin bir gün daha saklanması demekti.
+> Ve kıssa biter bitmez gelen ayet şu: **"Sonra kalpleriniz katılaştı. Taş gibi, hatta taştan daha katı."**
+> Peki bu kıssa bana bugün ne diyor?
+> Bazen yapmam gereken şeyi biliyorum. Ama sorularla erteliyorum. "Önce biraz daha araştırayım." "Hangi kitaptan başlasam?" "Pazartesi başlarım."
+> Ve sanıyorum ki bu erteleme sadece beni etkiliyor. Ama bazen değil.
+> Özür dilemeyi ertelediğim her gün, birinin kalbi biraz daha kırık kalıyor. Bir hakkı teslim etmeyi ertelediğim her gün, biri bir gün daha haksızlığa uğruyor.
+> Ve en korkuncu: Erteledikçe kalbim katılaşıyor. Tıpkı kıssanın hemen ardından gelen ayet gibi.
+> **Ertelediğin şey sadece senin işin olmayabilir. Belki birinin hakkı, senin bahanelerinin arkasında bekliyor.**
 E: Kur'an'ın en uzun suresinin adı, bir bahane hikâyesinden geliyor.
-K: Bakara 67–71
+K: Bakara 67–74
+N: Yaklaşık 70–75 saniye. "Bir cinayet işlenmişti" kısmında ekrana "Bakara 72–73" ve bir soru işareti, "taştan daha katı" kısmında bir taş çizimi gelebilir. Bu bölüm, bir sonraki "Taştan katı" bölümüne bağlanır.
 
 ## Taştan katı
 @ Bakara 74
