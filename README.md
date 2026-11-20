@@ -38,6 +38,18 @@ python build.py && node pdf.js
 - `03_hayatin_dongusu.md`: Doğumdan ölüme geleneklerin tablosu (dinde var, gelenek, dinle çatışıyor).
 - `04_dogumdan_olume_konusma.md`: "Doğumdan ölüme" konuşma metni, kısa ve uzun versiyon.
 
+### `icerikler/`
+Bu sohbette yazılan diğer bütün içerikler (Bakara, gelenek-ve-din ve carousel hariç, onlar kendi klasörlerinde).
+
+- `01_yusuf_serisi.md`: Yusuf Suresi, 5 bölüm
+- `02_kehf_serisi.md`: Kehf Suresi, 5 bölüm + mağara arkadaşları
+- `03_hucurat_nur_meryem.md`: Hucurât, Nûr ve Meryem serileri (5'er bölüm)
+- `04_ali_imran_ve_nazziat.md`: Âl-i İmrân (psikolojik/sosyolojik derslerle), Nâziât, Âdiyât
+- `05_sorular_ve_kadinlar.md`: Allah'a soru soranlar, Kur'an'da böyle yazmıyor, Kur'an'daki kadınlar, peygamberlerin duyguları
+- `06_1400_yil_once_bugun.md`: Toplumsal kıssalar, Kârûn, Cumartesi balıkları, Hendek sahipleri, modern putlar, güncel problemler
+- `07_tefekkur_ve_ramazan.md`: Ramazan duyurusu, "Bir ömür bir akşamüstü", Buz satıcısı, Yusuf'un kapıları, gece namazı, şükür
+- `08_yazarlik_ve_hesap.md`: "Eşik" denemesi, öykü, profil stratejisi, çekim notları
+
 ### `video-sablonlari/`
 Videoların üstüne gelen çizimler ve animasyonlar.
 
