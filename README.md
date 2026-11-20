@@ -27,7 +27,7 @@
 PDF'i yeniden üretmek için `bakara-serisi` klasöründe:
 
 ```
-python3 build.py && node pdf.js
+python build.py && node pdf.js
 ```
 
 ### `gelenek-ve-din/`
@@ -50,7 +50,7 @@ Videoların üstüne gelen çizimler ve animasyonlar.
 Örnek videoyu yeniden üretmek için `video-sablonlari` klasöründe:
 
 ```
-python3 inek_anim.py && node inek_render.js
+python inek_anim.py && node inek_render.js
 ```
 
 ### `carousel-hz-musa/`
