@@ -50,6 +50,15 @@ Bu sohbette yazılan diğer bütün içerikler (Bakara, gelenek-ve-din ve carous
 - `07_tefekkur_ve_ramazan.md`: Ramazan duyurusu, "Bir ömür bir akşamüstü", Buz satıcısı, Yusuf'un kapıları, gece namazı, şükür
 - `08_yazarlik_ve_hesap.md`: "Eşik" denemesi, öykü, profil stratejisi, çekim notları
 
+### `birlesik-pdf/`
+Bütün içeriklerin tek PDF'te birleşmiş hali (`Zeriya_Butun_Icerikler.pdf`). Yeni içerik eklenince yeniden üretmek için bu klasörde:
+
+```
+pip install markdown
+python build.py
+node pdf.js
+```
+
 ### `video-sablonlari/`
 Videoların üstüne gelen çizimler ve animasyonlar.
 
