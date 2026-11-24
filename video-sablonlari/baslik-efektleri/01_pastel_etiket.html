@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"InterB";src:url("file:///usr/share/fonts/opentype/inter/InterDisplay-Black.otf");font-weight:900}
+html,body{margin:0;background:transparent}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+.lab{position:absolute;left:50%;top:0;padding:6px 34px 14px;white-space:nowrap;
+ font-family:"InterB","Inter",sans-serif;font-weight:900;font-size:230px;letter-spacing:-12px;color:#111;line-height:1;transform-origin:50% 50%}
+.l1{background:#bcd9f5}.l2{background:#fbf1a6}
+.stk{position:absolute;transform-origin:50% 50%}
+</style></head><body><div id="stage">
+<div class="lab l1" id="w1">Soğan</div>
+<div class="lab l2" id="w2">istediler</div>
+
+<svg class="stk" id="s1" width="150" height="150" viewBox="-50 -50 100 100"><path d="M0-44 L12-14 L44-12 L19 8 L27 40 L0 22 L-27 40 L-19 8 L-44-12 L-12-14Z" fill="#e8b93a" stroke="#c9962a" stroke-width="3" stroke-linejoin="round"/><path d="M0-30 L8-10 L30-9 L13 5 L18 27 L0 15 L-18 27 L-13 5 L-30-9 L-8-10Z" fill="none" stroke="#fbe08a" stroke-width="2" stroke-dasharray="4 4"/></svg>
+
+<svg class="stk" id="s2" width="150" height="150" viewBox="-50 -50 100 100"><g fill="#fffdf6" stroke="#d9d3c3" stroke-width="2"><ellipse cx="0" cy="-27" rx="11" ry="20"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(45)"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(90)"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(135)"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(180)"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(225)"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(270)"/><ellipse cx="0" cy="-27" rx="11" ry="20" transform="rotate(315)"/></g><circle r="14" fill="#f3b72b" stroke="#d99a14" stroke-width="2"/></svg>
+
+<svg class="stk" id="s3" width="120" height="120" viewBox="-50 -50 100 100"><circle r="40" fill="#f2a1b8" stroke="#d9809a" stroke-width="3"/><circle r="29" fill="none" stroke="#fbd0dc" stroke-width="3"/><circle cx="-9" cy="-9" r="5" fill="#b84f6f"/><circle cx="9" cy="-9" r="5" fill="#b84f6f"/><circle cx="-9" cy="9" r="5" fill="#b84f6f"/><circle cx="9" cy="9" r="5" fill="#b84f6f"/></svg>
+
+<svg class="stk" id="s4" width="90" height="90" viewBox="-50 -50 100 100"><defs><radialGradient id="g" cx="35%" cy="30%"><stop offset="0" stop-color="#6f7de0"/><stop offset="1" stop-color="#1c2a8f"/></radialGradient></defs><circle r="42" fill="url(#g)"/><circle cx="-14" cy="-16" r="8" fill="#fff" opacity=".45"/></svg>
+
+<svg class="stk" id="s5" width="95" height="95" viewBox="-50 -50 100 100"><path d="M0-44 L12-14 L44-12 L19 8 L27 40 L0 22 L-27 40 L-19 8 L-44-12 L-12-14Z" fill="#f0cf6b" stroke="#c9962a" stroke-width="3" stroke-linejoin="round"/></svg>
+</div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eob=x=>{const c1=1.9,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}; // easeOutBack
+const eoc=x=>1-Math.pow(1-x,3);
+const $=id=>document.getElementById(id);
+// kelime: başlangıç sapması (dx,dy), dönüş, başlama, bitiş, hedef (merkezden y, hafif eğim)
+const W=[
+ {id:'w1',dx:-1300,dy:-260,rot:-28,t0:0.15,t1:0.85,y:300, tilt:-2},
+ {id:'w2',dx: 1300,dy: 340,rot: 24,t0:0.50,t1:1.20,y:585, tilt: 1.5}
+];
+const S=[
+ {id:'s1',x:95, y:330,rot:-14,t:1.15},
+ {id:'s2',x:965,y:290,rot: 12,t:1.30},
+ {id:'s3',x:120,y:850,rot:  0,t:1.45},
+ {id:'s4',x:975,y:590,rot:  0,t:1.60},
+ {id:'s5',x:955,y:870,rot: 15,t:1.75}
+];
+function setT(t){
+ W.forEach(w=>{
+  const el=$(w.id), p=eob(clamp((t-w.t0)/(w.t1-w.t0)));
+  const k=1-p, wd=el.offsetWidth, ht=el.offsetHeight;
+  const wob=(t>w.t1)?Math.sin((t-w.t1)*3.2)*0.35:0;
+  el.style.top=w.y+'px';
+  el.style.opacity=clamp((t-w.t0)/0.08);
+  el.style.transform=`translate(-50%,0) translate(${w.dx*k}px,${w.dy*k}px) rotate(${w.rot*k+w.tilt+wob}deg) scale(${1+0.25*k})`;
+ });
+ S.forEach(s=>{
+  const el=$(s.id), q=clamp((t-s.t)/0.55), p=t<s.t?0:eob(q);
+  const w=el.getAttribute('width')*1;
+  const sway=t>s.t+0.5?Math.sin((t-s.t)*2.4)*4:0;
+  el.style.left=(s.x-w/2)+'px'; el.style.top=(s.y-w/2)+'px';
+  el.style.opacity=t<s.t?0:1;
+  el.style.transform=`rotate(${s.rot+(1-p)*-120+sway}deg) scale(${p})`;
+ });
+}
+setT(0);
+</script></body></html>

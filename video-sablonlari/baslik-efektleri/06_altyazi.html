@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="local2.css"><style>
+html,body{margin:0;background:transparent}#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+#box{position:absolute;left:50%;top:1480px;transform:translateX(-50%);filter:drop-shadow(0 8px 10px rgba(30,16,6,.5))}
+#p{padding:18px 44px 30px;background:#e8d6a6;font-family:"EB Garamond",serif;font-weight:700;font-size:76px;color:#3b2616;white-space:nowrap;
+ clip-path:polygon(0 8%,4% 0,18% 5%,40% 0,62% 5%,84% 0,100% 7%,98% 50%,100% 93%,82% 100%,58% 95%,36% 100%,14% 95%,0 100%,2% 50%)}
+#p span{display:inline-block;transition:none}
+</style></head><body><div id="stage"><div id="box"><div id="p"></div></div></div><script>
+const L=[{a:0.2,b:1.65,w:"Gökten yemek iniyordu.".split(' ')},{a:1.75,b:3.45,w:"Onlar soğan istedi.".split(' ')}];
+function setT(t){const box=document.getElementById('box'),p=document.getElementById('p');
+ const l=L.find(x=>t>=x.a&&t<x.b);if(!l){box.style.opacity=0;return}
+ box.style.opacity=1;const k=(t-l.a)/(l.b-l.a);const ai=Math.min(l.w.length-1,Math.floor(k*l.w.length));
+ p.innerHTML=l.w.map((w,i)=>`<span style="color:${i===ai?'#8e2b1c':'#3b2616'};transform:scale(${i===ai?1.12:1});margin:0 14px">${w}</span>`).join('');
+ box.style.transform=`translateX(-50%) rotate(-1.2deg) scale(${0.9+0.1*Math.min(1,(t-l.a)/0.15)})`;}
+document.fonts.ready.then(()=>setT(0));
+</script></body></html>

@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="local2.css">
+<style>
+html,body{margin:0;background:transparent}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+#big{position:absolute;left:50%;top:400px;white-space:nowrap;font-family:"Inter";font-weight:900;font-size:350px;line-height:.9;letter-spacing:-12px;color:#f3e6c4;
+ transform:translateX(-50%) scaleX(.8);transform-origin:50% 50%;filter:drop-shadow(0 10px 14px rgba(20,10,3,.55))}
+#big .m{display:inline-block;overflow:hidden;vertical-align:top;padding:70px 4px 0;margin-top:-70px}
+#big .m span{display:inline-block}
+#sc{position:absolute;left:170px;top:600px;white-space:nowrap;font-family:"EB Garamond",serif;font-style:italic;font-weight:500;font-size:230px;line-height:1;color:#e9b949;letter-spacing:-4px;
+ transform-origin:0 70%;filter:drop-shadow(0 6px 8px rgba(20,10,3,.6));padding-right:40px}
+</style></head><body><div id="stage"><div id="big"></div><div id="sc">istediler</div></div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eob=x=>{const c1=1.5,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const eoc=x=>1-Math.pow(1-x,3);
+const big=document.getElementById('big'),sc=document.getElementById('sc');
+const L=[...'SOĞAN'].map(c=>{const m=document.createElement('span');m.className='m';const s=document.createElement('span');s.textContent=c;m.appendChild(s);big.appendChild(m);return s});
+function setT(t){
+ L.forEach((s,i)=>{const p=eob(clamp((t-0.1-i*0.09)/0.5));s.style.transform=`translateY(${(1-p)*115}%)`});
+ const q=eoc(clamp((t-0.85)/0.6));
+ sc.style.clipPath=`inset(-20% ${(1-q)*100}% -20% 0)`;
+ const w=t>1.45?Math.sin((t-1.45)*2.2)*0.8:0;
+ sc.style.transform=`rotate(${-7+w}deg) translateY(${(1-q)*20}px)`;
+}
+document.fonts.ready.then(()=>setT(0));
+</script></body></html>

@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="local2.css">
+<style>
+html,body{margin:0;background:transparent}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+.lab{position:absolute;left:50%;top:0;white-space:nowrap;transform-origin:50% 50%;
+ filter:drop-shadow(0 8px 10px rgba(40,22,8,.45))}
+.lab .p{position:relative;padding:20px 54px 34px;
+ font-family:"EB Garamond",serif;font-weight:700;font-size:214px;letter-spacing:-4px;line-height:1;color:#3b2616;
+ text-shadow:0 1px 0 rgba(255,240,200,.35)}
+.l1 .p{background:#e8d6a6;clip-path:polygon(0 6%,3% 0,9% 4%,17% 0,26% 5%,38% 1%,50% 4%,63% 0,75% 5%,88% 1%,96% 5%,100% 2%,99% 30%,100% 55%,98% 80%,100% 97%,93% 100%,82% 96%,70% 100%,57% 95%,44% 100%,31% 96%,18% 100%,8% 96%,0 100%,2% 70%,0 45%,1% 20%)}
+.l2 .p{background:#dcc48f;clip-path:polygon(1% 3%,8% 0,19% 5%,31% 1%,45% 5%,58% 0,71% 4%,84% 0,94% 4%,100% 1%,98% 28%,100% 52%,99% 78%,100% 99%,90% 95%,78% 100%,64% 96%,50% 100%,36% 95%,22% 100%,10% 96%,0 100%,2% 72%,0 48%,2% 22%)}
+.paper{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.55;pointer-events:none}
+.stk{position:absolute;transform-origin:50% 50%;filter:drop-shadow(0 5px 6px rgba(40,22,8,.45))}
+</style></head><body><div id="stage">
+<svg width="0" height="0" style="position:absolute"><defs>
+ <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .35  0 0 0 0 .22  0 0 0 0 .1  0 0 0 .9 -.2"/></filter>
+ <filter id="blot" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="3" seed="9"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .38  0 0 0 0 .16  0 0 0 1.4 -.45"/></filter>
+</defs></svg>
+<div class="lab l1" id="w1"><div class="p">Soğan<svg class="paper" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#blot)"/><rect width="100%" height="100%" filter="url(#grain)" opacity=".6"/></svg></div></div>
+<div class="lab l2" id="w2"><div class="p">istediler<svg class="paper" width="100%" height="100%"><rect width="100%" height="100%" filter="url(#blot)"/><rect width="100%" height="100%" filter="url(#grain)" opacity=".6"/></svg></div></div>
+
+<!-- mühür -->
+<svg class="stk" id="s1" width="170" height="170" viewBox="-60 -60 120 120"><path d="M0-52 C14-56 20-44 32-46 C44-44 42-30 52-22 C58-10 48-2 50 10 C52 24 40 28 34 38 C26 50 14 46 2 52 C-10 56 -18 46 -30 44 C-44 40 -42 28 -50 18 C-56 6 -48-4 -50-16 C-52-30 -38-34 -30-42 C-18-50-10-48 0-52Z" fill="#8e2b1c"/><path d="M0-52 C14-56 20-44 32-46 C44-44 42-30 52-22 C58-10 48-2 50 10 C52 24 40 28 34 38 C26 50 14 46 2 52 C-10 56 -18 46 -30 44 C-44 40 -42 28 -50 18 C-56 6 -48-4 -50-16 C-52-30 -38-34 -30-42 C-18-50-10-48 0-52Z" fill="none" stroke="#b5503a" stroke-width="3" opacity=".6"/><circle r="30" fill="none" stroke="#5e1a10" stroke-width="3"/><path d="M0-20 L5-6 L20-6 L8 3 L12 17 L0 9 L-12 17 L-8 3 L-20-6 L-5-6Z" fill="#5e1a10"/></svg>
+
+<!-- kuru yaprak -->
+<svg class="stk" id="s2" width="190" height="190" viewBox="-60 -60 120 120"><path d="M-6 52 C-40 30 -48-10 -10-48 C20-30 46-4 30 30 C20 46 6 52 -6 52Z" fill="#a87a35"/><path d="M-6 52 C-14 20 -10-10 -10-48" fill="none" stroke="#6e4a1c" stroke-width="3"/><path d="M-9 20 L-26 8 M-9 4 L-30-6 M-8-12 L-24-24 M-9 14 L10 4 M-9-2 L14-14" fill="none" stroke="#6e4a1c" stroke-width="2" opacity=".8"/><circle cx="12" cy="22" r="5" fill="#7a5522" opacity=".7"/></svg>
+
+<!-- mürekkep lekesi -->
+<svg class="stk" id="s3" width="150" height="150" viewBox="-50 -50 100 100"><path d="M0-36 C12-38 18-28 28-24 C40-18 34-6 38 4 C42 18 28 22 20 30 C10 40 2 34-8 38 C-22 42-28 30-34 22 C-42 12-34 2-36-8 C-38-22-24-26-16-32 C-8-38-4-34 0-36Z" fill="#2b1a0e" opacity=".88"/><circle cx="44" cy="-30" r="5" fill="#2b1a0e" opacity=".85"/><circle cx="-42" cy="30" r="3.5" fill="#2b1a0e" opacity=".8"/></svg>
+
+<!-- zümrüt boncuk -->
+<svg class="stk" id="s4" width="95" height="95" viewBox="-50 -50 100 100"><defs><radialGradient id="g" cx="35%" cy="30%"><stop offset="0" stop-color="#4fae8a"/><stop offset="1" stop-color="#0f4a39"/></radialGradient></defs><circle r="42" fill="url(#g)"/><circle cx="-14" cy="-16" r="8" fill="#fff" opacity=".4"/></svg>
+
+<!-- altın yıldız mührü -->
+<svg class="stk" id="s5" width="105" height="105" viewBox="-50 -50 100 100"><path d="M0-44 L12-14 L44-12 L19 8 L27 40 L0 22 L-27 40 L-19 8 L-44-12 L-12-14Z" fill="#c9962a" stroke="#8a6414" stroke-width="3" stroke-linejoin="round"/></svg>
+</div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eob=x=>{const c1=1.6,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const $=id=>document.getElementById(id);
+const W=[
+ {id:'w1',dx:-1300,dy:-260,rot:-28,t0:0.15,t1:0.85,y:300,tilt:-2.2},
+ {id:'w2',dx: 1300,dy: 340,rot: 24,t0:0.50,t1:1.20,y:590,tilt: 1.6}
+];
+const S=[
+ {id:'s1',x:100, y:330,rot:-12,t:1.15},
+ {id:'s2',x:960, y:300,rot: 18,t:1.30},
+ {id:'s3',x:120, y:880,rot:  0,t:1.45},
+ {id:'s4',x:985, y:600,rot:  0,t:1.60},
+ {id:'s5',x:955, y:890,rot: 14,t:1.75}
+];
+function setT(t){
+ W.forEach(w=>{
+  const el=$(w.id), p=eob(clamp((t-w.t0)/(w.t1-w.t0))), k=1-p;
+  const wob=(t>w.t1)?Math.sin((t-w.t1)*3.2)*0.3:0;
+  el.style.top=w.y+'px'; el.style.opacity=clamp((t-w.t0)/0.08);
+  el.style.transform=`translate(-50%,0) translate(${w.dx*k}px,${w.dy*k}px) rotate(${w.rot*k+w.tilt+wob}deg) scale(${1+0.25*k})`;
+ });
+ S.forEach(s=>{
+  const el=$(s.id), q=clamp((t-s.t)/0.55), p=t<s.t?0:eob(q);
+  const w=el.getAttribute('width')*1, sway=t>s.t+0.5?Math.sin((t-s.t)*2.4)*3:0;
+  el.style.left=(s.x-w/2)+'px'; el.style.top=(s.y-w/2)+'px'; el.style.opacity=t<s.t?0:1;
+  el.style.transform=`rotate(${s.rot+(1-p)*-120+sway}deg) scale(${p})`;
+ });
+}
+setT(0);
+</script></body></html>
